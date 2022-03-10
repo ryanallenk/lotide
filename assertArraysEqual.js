@@ -7,19 +7,17 @@ const assertArraysEqual = function(firstArr, secondArr) {
 };
 
 const eqArrays = function(firstArr, secondArr) {
-  let equal = ""
   if (firstArr.length !== secondArr.length) {
-    equal = false;
+    return false;
   } else {
     for (let i = 0; i < firstArr.length; i++) {
-      if (firstArr[i] === secondArr[i]) {
-      equal = true;
+      if (firstArr[i] !== secondArr[i]) {
+      return false;
       } else {
-        equal = false;
+        return true;
       }
     }  
   } 
-  return equal
 };
 
 
